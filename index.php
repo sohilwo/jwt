@@ -1,0 +1,11 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+//include('vendor/autoload.php');
+//use Nowakowskir\JWT\TokenDecoded;
+require __DIR__ . '/vendor/autoload.php';
+
+$payload = 'eyJraWQiOiI4NkQ4OEtmIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoiY29tLmhrY3diLnRheGktZGVidWciLCJleHAiOjE1ODQ2OTUwOTMsImlhdCI6MTU4NDY5NDQ5Mywic3ViIjoiMDAxMTgwLmZlMjJlMDU3NDhkYzQ3YTFiNWVkYTkzOGFkMjBiZTZmLjA0MzQiLCJjX2hhc2giOiJhdm95T3gyVWM0NEFpNWdIbldzMktRIiwiZW1haWwiOiJkNXdzYWk2bmd5QHByaXZhdGVyZWxheS5hcHBsZWlkLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjoidHJ1ZSIsImlzX3ByaXZhdGVfZW1haWwiOiJ0cnVlIiwiYXV0aF90aW1lIjoxNTg0Njk0NDkzLCJub25jZV9zdXBwb3J0ZWQiOnRydWV9.S0_IGDb-rpdOqVsQVxu1Cuu7klgNcOS3Q-k2av_l9Mu6kF-2KGHOTWq1HfCon5FmCoeNnRJtqvG2S2TSylJ6bRk5DYIatLnzMs6RFmIW7z5c-l662KIVOkwsQESWIFLG4iZ8zwH5yY5uVi-NHeIoVE6AtazCDYY4jF7TWtQv-5t5xsD5p6-sc8A8DphLKfLR9szzCJkpC5_g_wpKlP4pOJFQ_sBcJAeLIMBURLE-yfT9xi30kNIpQZvjo--f4pRWRuA3AQ4KBKhslHYfySNOntCytVlRHyU64BEpkz55LD6ZMlYBHpuyert300RdxjLxBbfoNM3mEjRL4ntxjA7Tvw';
+$tokenDecoded = new TokenDecoded(['alg' => JWT::ALGORITHM_HS384], $payload);
